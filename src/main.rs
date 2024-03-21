@@ -10,29 +10,6 @@ fn main() {
     let sink0 = Sink::try_new(&stream_handle).unwrap(); // 毎秒用
     let sink1 = Sink::try_new(&stream_handle).unwrap(); // 定時用
 
-    // let source0 = SineWave::new(1975.0)
-    //     .take_duration(Duration::from_secs_f32(0.1))
-    //     .amplify(0.20);
-    // let source1 = SineWave::new(440.0)
-    //     .take_duration(Duration::from_secs_f32(0.2))
-    //     .amplify(0.20);
-    // let source2 = SineWave::new(880.0)
-    //     .take_duration(Duration::from_secs_f32(3.0))
-    //     .amplify(0.20)
-    //     .enumerate()
-    //     .map(move |(i, sample)| {
-    //         let decay_start_sample = (1.0 * 44100.0) as usize; // 1 second * sample rate
-    //         if i < decay_start_sample {
-    //             sample // No decay for the first 1 second
-    //         } else {
-    //             let decay_factor = (-0.01 * (i - decay_start_sample) as f32).exp();
-    //             sample * decay_factor
-    //         }
-    //     })
-    //     .collect::<Vec<_>>();
-
-    // let source2 = SamplesBuffer::new(1, 44100, source2);
-
     loop {
         let now_time = Local::now();
         let now_seconds = now_time.second();
