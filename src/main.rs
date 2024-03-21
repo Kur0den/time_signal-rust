@@ -23,9 +23,10 @@ fn main() {
             } else {
                 sink0.append(create_source0());
             }
-            sleep(Duration::from_millis(900));
             println!("{}", now_time.format("%H:%M:%S"));
+            sleep(Duration::from_millis(800));
         }
+        println!("looping")
     }
 }
 
