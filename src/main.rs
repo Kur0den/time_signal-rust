@@ -26,7 +26,6 @@ fn main() {
             println!("{}", now_time.format("%H:%M:%S"));
             sleep(Duration::from_millis(800));
         }
-        println!("looping")
     }
 }
 
