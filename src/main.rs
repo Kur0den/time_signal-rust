@@ -46,8 +46,8 @@ fn main() {
             } else {
                 sink0.append(create_source0());
             }
-            sleep(Duration::from_millis(100));
-            println!("now_seconds: {}", now_seconds);
+            sleep(Duration::from_millis(900));
+            println!("{}", now_time.format("%H:%M:%S"));
         }
     }
 }
